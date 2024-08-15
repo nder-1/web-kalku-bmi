@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="kalkulator-bmi">
+                <h1>Kalkulator BMI</h1>
+                <p>Berat badan ideal impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang 
+                    di kalkulator BMI.</p>
+
+                <form id="bmiForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="gender">Jenis Kelamin</label><br>
+                        <input type="radio" id="pria" name="gender" value="Pria"> Pria
+                        <input type="radio" id="wanita" name="gender" value="Wanita"> Wanita
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Berat Badan (kg)</label>
+                        <input type="number" id="weight" name="weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Tinggi Badan (cm)</label>
+                        <input type="number" id="height" name="height" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Usia (tahun)</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <button class="button" onclick="hitungBMI()">Hitung BMI</button>
+                    <button class="reset" onclick="resetForm()">Reset</button>
+                </form>
+
+                <h3>Keunggulan fitur</h3>
+                <ul>
+                    <p>1. Menghitung berat badan</br>
+                    2. Menentukan kategori berat badan ideal atau tidak</br>
+                    3. Mempersiapkan program penurunan berat badan</p>
+                    <p>Bisa dibilang, rumus BMI tidaklah sepenuhnya akurat dan akan dimaknai berbeda pada kasus tertentu. 
+                        Misalkan bagi atlet binaraga dan ibu hamil, angka BMI yang tinggi tidak berarti bahwa mereka memiliki 
+                        lemak berlebih atau tidak sehat. Selain itu, pada anak-anak dan remaja, perhitungan ini perlu disesuaikan 
+                        dengan usia maupun jenis kelaminnya.</p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="hasil-bmi-container">
+                <h2>Hasil</h2>
+                <h4>Isi data untuk mengetahui BMI anda..</h4>
+                <div class="hasil-bmi" id="hasilBMI" style="display:none;">
+                    <h2 id="statusBMI"></h2>
+                    <p id="bmiValue" class="bmi-value"></p>
+                    <p id="keteranganBMI"></p>
+                    <button id="downloadBtn" class="download-btn" style="display:none;">Download Hasil BMI</button>
+                </div>
+                <div id="penjelasan" class="penjelasan-bmi" style="display:none;">
+                    <p id="penjelasanBMI"></p>
+                    <p id="penjelasan2BMI"></p>
+                    <p id="solusi"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by Sander</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
